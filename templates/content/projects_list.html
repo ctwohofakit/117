@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Projects{% endblock title %}
+
+{% block content %}
+
+<h3 class="project-head">Projects</h3>
+<div class="project-section">
+    
+    <div class="project-card"><a href="https://github.com/" target="blank">
+        <div class="project-img">
+            <img class="static-image" src="{% static '/img/Project2.jpg' %}">
+            <img class="gif-image" src="{% static '/img/storean.gif' %}">
+        </div> 
+        <h3>Online Store</h3>
+        <p>Makeup Ecommerce Store contain prodiucts pages, catalog page, cart page, and admin portal to allow to add/edit/remove products compontent</p>
+        <h4>2024</h4>
+        <div class="sk-project-tag">
+            <label class="sk">HTML</label>
+            <label class="sk">CSS</label>
+            <label class="sk">Javasccript</label>
+            <label class="sk">Jquery</label>
+            <label class="sk">React</label>
+            <label class="sk">Flask</label>
+            <label class="sk">MongoDB</label>
+        </div>
+        </a>
+    </div>
+
+   
+</div>
+
+
+
+
+
+{% endblock content %}

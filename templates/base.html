@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download" />
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Ms+Madi&family=Vibur&display=swap" rel="stylesheet">
+    <title>{%block title%}{%endblock title%}</title>
+</head>
+
+<body>
+
+    <header class="center-row">
+
+        <div class="header-left-side center-row">
+            <a class="logo" href="{% url 'about'%}"><h2>Kit</h2></a>
+        </div>
+    
+        <!-- <input type="checkbox" id="check"> -->
+    
+        
+    
+        <nav class="header-right-side">
+        <!-- <label for="check" class="h-menu-close">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F3F3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </label>
+            
+        <label for="check" class="h-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F3F3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label> -->
+    
+            <input type="checkbox" name="" id="nav-check">
+    
+            <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            </div>
+    
+            <div class="nav-options">
+                <a href="{% url 'about'%}">About Me</a>
+                <a href="{% url 'project_list'%}">Projects</a>
+                <a href="">Expierence</a>
+                <a href="{% url 'contact'%}">Contact</a>
+                <button class="resume"> <a href="/static/Kit_resume.pdf" download><span class="material-symbols-outlined">download
+                </span></a></button>
+    
+            </div>
+        </nav>
+    </header>
+    <div>
+        {%block content%}
+        {%endblock content%}
+    </div>
+
+    
+
+
+</body>
+</html>
