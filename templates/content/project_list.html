@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  Projects
+{% endblock title %}
+
+{% block content %}
+<h1 class="project-head">PROJECTS</h1> 
+
+<div class="project-section">
+    {# Loop through each project #}
+    {% for project in projects %}
+        <div class="project-card">
+            {% if user.is_authenticated %}
+            <!-- <a href="{% url 'detail' project.pk %}"><button>Detail</button></a> -->
+            <div class="edit-set">
+                <a href="{% url 'edit' project.pk %}">
+                  <button class="edit-btn">Edit</button>
+                </a>
+                <a href="{% url 'delete' project.pk %}">
+                  <button class="del-btn">Delete</button>
+                </a>
+              </div>
+            
+            <br>
+            {% endif %}
+            <a href="{{ project.website }}" target="_blank">
+                <div class="project-img">
+                    <img class="static-image" src="{{ project.static.url }}" alt="Static preview">
+                    <img class="gif-image" src="{{ project.animated.url }}" alt="Animated preview">
+                </div>
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <h4>{{ project.date|date:"Y" }}</h4>
+                <div class="sk-project-tag">
+                    {% for tag in project.tags.all %}
+                        <label class="sk">{{ tag.name }}</label>
+                    {% endfor %}
+                </div>
+            </a>
+
+        </div>
+        {% endfor %}
+
+
+</div>
+{% endblock content %}

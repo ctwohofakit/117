@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+
+{%block title%}New Project{%endblock title%}
+
+{%block content%}
+    <div class="project-form">
+        <h1>New Project</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
+        <div class="submit-button-set">
+            <input type="submit" class="submit-button" value="Create">
+
+        </div>
+        </form>
+    </div>
+
+
+{%endblock content%}

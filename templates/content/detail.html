@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }}{% endblock title %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <div class="edit-set">
+      <a href="{% url 'edit' project.pk %}"><button>Edit</button></a>
+      <a href="{% url 'delete' project.pk %}"><button>Delete</button></a>
+    </div>
+  {% endif %}
+
+
+  <div class="post">
+    <img class="upload-icon" src="{{ project.static.url }}">
+    <img class="upload-icon" src="{{ project.animated.url }}">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+    <small>{{ project.date }}</small>
+
+    {% if project.tags %}
+      {% for tag in project.tags.split|default_if_none:'' %}
+        <label class="sk">{{ tag }}</label>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock content %}

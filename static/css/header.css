@@ -71,3 +71,38 @@ header{
 #nav-check, .nav-btn{
     display:none;
 }
+
+.logo-label{
+    background-color: var(--primary-color-bar);
+    text-transform: uppercase;
+    border-width: 0;
+    font-size:1rem;
+    color:white;
+    text-align: center;
+    margin-right:5%;
+}
+
+.logo-label:hover{
+    transform: scale(1.05);
+    text-decoration: none;
+    border:solid 2px white;
+    color: white;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.resume{
+    padding: 0.5% 2% 0.5% 2%;
+    background-color: var(--footer-color);
+    text-transform: uppercase;
+    border-radius: 4rem;
+    border-color:  whitesmoke;
+    color:white;
+    text-align: center;
+    margin-right:5%;
+}
+
+.resume:hover{
+    transform: scale(1.01);
+    background: linear-gradient(35deg, #101a18 0%, #2f8573 35%, #031612 100%);
+}

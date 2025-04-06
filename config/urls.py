@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from pages import views
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path
+from django.contrib.auth.views import LoginView,LogoutView,PasswordChangeView,PasswordChangeDoneView
+
 
 from django.contrib.auth import urls
 
@@ -26,6 +31,9 @@ urlpatterns = [
     path('testing_page', views.testing_view, name='test'),
     path('', include("pages.urls")),
     path('content/', include("content.urls")),
-
+    path('accounts/', include('django.contrib.auth.urls')), 
 
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

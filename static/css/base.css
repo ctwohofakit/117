@@ -114,6 +114,7 @@ h2{
     background: var(--primary-color-bar);
     transform: scale(1.05);
     background: linear-gradient(35deg, #283E3A 0%, #71e6d0 100%);
+    
 }
 
 .project-head{
@@ -139,7 +140,7 @@ h2{
     width: 31em;
     border-radius: 0.3rem;
     border-width: 4px 4px 4px 4px; 
-    filter: drop-shadow(5px 5px 5px rgba(34, 54, 47, 0.5));
+
 }
 .project-card:hover{
     transform: scale(1.05);
@@ -158,10 +159,12 @@ p{
 }
 .project-img{
     width:100%;
+    filter: drop-shadow(5px 5px 5px rgba(34, 54, 47, 0.5));
 }
 .project-img img{
     width:100%;
     border-radius: 1rem;
+    filter: drop-shadow(5px 5px 5px rgba(34, 54, 47, 0.5));
 }
 
 .gif-image{
@@ -245,18 +248,94 @@ p{
     background: linear-gradient(35deg, #c25151 0%, #ca9999 100%);
 }
 
-.resume{
-    padding: 0.5% 2% 0.5% 2%;
-    background-color: var(--footer-color);
+
+
+
+.edit-set{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+
+}
+.edit-btn{
+    background-color: #3498DB;
     text-transform: uppercase;
-    border-radius: 4rem;
-    border-color:  whitesmoke;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border-width: 0;
+    font-size:1rem;
     color:white;
     text-align: center;
-    margin-right:5%;
+	border-bottom: 5px solid #2980B9;
+    cursor: pointer;
+}
+.edit-btn:hover{
+    background-color: #19608f;
+    border-bottom: 5px solid #133952;
+
 }
 
-.resume:hover{
-    transform: scale(1.01);
-    background: linear-gradient(35deg, #101a18 0%, #2f8573 35%, #031612 100%);
+.del-btn{
+    background-color: #db243c;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border-width: 0;
+    font-size:1rem;
+    color:white;
+    text-align: center;
+	border-bottom: 5px solid #b92929;
+
+    cursor: pointer;
+}
+.del-btn:hover{
+    background-color: #66142d;
+    border-bottom: 5px solid #440e0e;
+
+}
+
+.project-form h1{
+    padding: 2rem;
+    text-align: center;
+    color:var(--footer-color);
+}
+
+.project-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.project-form form{
+    text-align: left;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #D9D9D9;
+    width:20%;
+    padding: 0.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    color: #B67272;
+}
+
+.project-form input{
+    height:2rem;
+    width:100%;
+    border-style: solid;
+    border-color: #ffffff;
+    border-bottom-width: 0.2rem;
+    background-color: #ffffff;
+}
+
+.submit-button{
+    background-color: #B67272 !important;
+    border-radius: 5rem !important;
+    height:3rem!important;
+}
+
+.submit-button:hover{
+
+    background-color: #472e2e !important;
+    color: white;
 }

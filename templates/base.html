@@ -19,7 +19,16 @@
     <header class="center-row">
 
         <div class="header-left-side center-row">
-            <a class="logo" href="{% url 'about'%}"><h2>Kit</h2></a>
+            {%if user.is_authenticated %}
+            <form method="POST" action="{%url 'logout'%}">
+              {%csrf_token%}
+              <input class="logo-label"  type="submit"  value="Log Out">
+            </form>
+          {%else%}
+          <a class="logo" href="{% url 'about'%}"><h2>Kit</h2></a>
+          {%endif%}
+
+
         </div>
     
         <!-- <input type="checkbox" id="check"> -->
@@ -47,11 +56,12 @@
     
             <div class="nav-options">
                 <a href="{% url 'about'%}">About Me</a>
-                <a href="{% url 'project_list'%}">Projects</a>
+                <a href="{% url 'list'%}">Projects</a>
                 <a href="">Expierence</a>
                 <a href="{% url 'contact'%}">Contact</a>
                 <button class="resume"> <a href="/static/Kit_resume.pdf" download><span class="material-symbols-outlined">download
                 </span></a></button>
+
     
             </div>
         </nav>

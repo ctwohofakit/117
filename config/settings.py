@@ -16,16 +16,19 @@ import certifi
 import environ
 
 
+
 os.environ["SSL_CERT_FILE"]=certifi.where()
 
 #load env file
-env=environ.Env()
+env = environ.Env()
 environ.Env.read_env()
 
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # Quick-start development settings - unsuitable for production
@@ -146,3 +149,5 @@ EMAIL_USE_SSL=False
 EMAIL_USE_TLS=True
 EMAIL_HOST_USER=env('SMTP_EMAIL')
 EMAIL_HOST_PASSWORD=env('SMTP_PASS')
+
+LOGIN_REDIRECT_URL = '/'

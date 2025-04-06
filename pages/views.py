@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from .forms import ContactForm
 from django.core.mail import send_mail
 
+
 class AboutPageView(TemplateView):
     template_name="pages/about.html"
 
@@ -29,19 +30,18 @@ def contact_view(request):
                 f"Subject: {subject}\n"
                 f"Message: {message}"
             )
-            
+
             send_mail(
                 "Email from Portfolio",
                 message_body,
                 email,
                 ['ctwohofa@gmail.com'],
             )
-
-
         else:
             print("Invalid from data")
-
     else:
         #display the page
         form =ContactForm()
     return render(request,"pages/contact.html",{"form":form})
+
+
