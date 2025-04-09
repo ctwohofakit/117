@@ -12,6 +12,9 @@ def testing_view(request):
     return render(request, "pages/test.html" )
 
 
+class ExpierenceView(TemplateView):
+    template_name="pages/expierence.html"
+
 def contact_view(request):
     if request.method=='POST':
         #will validat and send email

@@ -254,7 +254,7 @@ p{
 .edit-set{
     display: flex;
     justify-content: center;
-    gap:2rem;
+    gap:1rem;
 
 }
 .edit-btn{
@@ -338,4 +338,45 @@ p{
 
     background-color: #472e2e !important;
     color: white;
+}
+
+.post-btn{
+    background-color: var(--footer-color);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border-width: 0;
+    font-size:1rem;
+    color:white;
+    text-align: center;
+	border-bottom: 5px solid #201c1c;
+
+    cursor: pointer;
+}
+.post-btn:hover{
+    background-color:  #0f4b21;
+    border-bottom: 5px solid #0a3316;
+
+}
+
+.chart-section{
+    width: 100%;
+}
+
+
+#chart-container {
+    padding-bottom:5%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    /* max-width: 700px; */
+}
+
+#row-container {
+    padding-left:10%;
+    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
 }

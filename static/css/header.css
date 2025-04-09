@@ -106,3 +106,36 @@ header{
     transform: scale(1.01);
     background: linear-gradient(35deg, #101a18 0%, #2f8573 35%, #031612 100%);
 }
+
+footer{
+    bottom:0;
+    width:100%;
+    position: fixed;
+    background-color:var(--footer-color);
+    height:60px;
+    z-index: 100;
+}
+
+
+.footer-left-side{
+    width:40%;
+    
+}
+
+.footer-right-side{
+    width:60%;
+}
+
+.social{
+    width:30px;
+    height:30px;
+}
+.social:hover{
+    transform: scale(1.05);
+
+}
+
+.social-options{
+    width: 100%;
+    gap:3rem;
+}

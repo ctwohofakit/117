@@ -31,7 +31,7 @@ urlpatterns = [
     path('testing_page', views.testing_view, name='test'),
     path('', include("pages.urls")),
     path('content/', include("content.urls")),
-    path('accounts/', include('django.contrib.auth.urls')), 
+    path('', include('django.contrib.auth.urls')), 
 
 ]
 

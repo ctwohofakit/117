@@ -57,7 +57,7 @@
             <div class="nav-options">
                 <a href="{% url 'about'%}">About Me</a>
                 <a href="{% url 'list'%}">Projects</a>
-                <a href="">Expierence</a>
+                <a href="{% url 'expierence'%}">Expierence</a>
                 <a href="{% url 'contact'%}">Contact</a>
                 <button class="resume"> <a href="/static/Kit_resume.pdf" download><span class="material-symbols-outlined">download
                 </span></a></button>
@@ -71,8 +71,16 @@
         {%endblock content%}
     </div>
 
-    
+    <footer class="center-row">
+        <div class="social-options center-row">
+            <a href="https://linkedin.com"><img class="social" src="{% static 'img/linkedin.png' %}"></a>
+            <a href="https://facebook.com"><img class="social" src="{% static 'img/fb.png' %}"></a>
+            <a href="https://instragram.com"><img class="social" src="{% static 'img/IG.png' %}"></a>
+        </div>
+        </footer>
 
-
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+        <script src="{% static 'js/rowChart.js' %}"></script>
 </body>
 </html>

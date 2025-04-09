@@ -6,7 +6,23 @@
 {% endblock title %}
 
 {% block content %}
-<h1 class="project-head">PROJECTS</h1> 
+<br>
+{% if user.is_authenticated %}
+  <div class="edit-set">
+      <a href="{% url 'new' %}">
+        <button class="post-btn">New</button>
+      </a>
+      <a href="{% url 'draft' %}">
+        <button class="post-btn">Draft</button>
+      </a>
+      <a href="{% url 'archive' %}">
+        <button class="post-btn">Archived</button>
+      </a>
+    </div>
+{% endif %}
+<h3 class="project-head">PROJECTS</h3> 
+<br>
+
 
 <div class="project-section">
     {# Loop through each project #}
